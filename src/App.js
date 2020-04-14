@@ -136,7 +136,7 @@ class DisplayUnit extends React.Component {
       window.addEventListener(
         "deviceorientation",
         ({ alpha, beta, gamma }) => {
-          if (between(beta, -130, -50) || between(Math.abs(gamma), 160, 200)) {
+          if (between(beta, -150, -70) || between(Math.abs(gamma), 160, 200)) {
             this.state.upsideDown || this.setState({ upsideDown: true });
           } else
             this.state.upsideDown &&
