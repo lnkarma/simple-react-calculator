@@ -154,7 +154,7 @@ class DisplayUnit extends React.Component {
     }
   }
   getCalcWord(value) {
-    let calcWord = calculatorWordList[value];
+    let calcWord = calculatorWordList[value].toUpperCase();
     return calcWord ? <span className="rotate">{calcWord}</span> : value;
   }
   render() {
