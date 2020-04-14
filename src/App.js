@@ -191,18 +191,20 @@ class App extends React.Component {
   }
 
   handleNum = (num) => {
-    if (this.state.result) this.handleClear(true);
-    let key = this.state.operator ? "secondOperand" : "firstOperand";
-    let value = this.state[key];
+    let state = Object.assign(
+      {},
+      this.state.result ? this.baseState : this.state
+    );
+    let key = state.operator ? "secondOperand" : "firstOperand";
+    let value = state[key];
     if (num === "." && value.indexOf(".") !== -1) return;
-    let obj = {
-      [key]: `${value}${num}`
-        .replace(/[^.]*/, (match) => {
-          return parseInt(match.slice(-15)) || 0;
-        })
-        .slice(-15),
-    };
-    this.setState(obj);
+
+    state[key] = `${value}${num}`
+      .replace(/[^.]*/, (match) => {
+        return parseInt(match.slice(-15)) || 0;
+      })
+      .slice(-15);
+    this.setState(state);
   };
 
   handleOperator = (operator) => {
@@ -225,6 +227,7 @@ class App extends React.Component {
 
   calculate = () => {
     let { firstOperand, secondOperand, operator } = this.state;
+    if (!operator) return "";
     if (!secondOperand) [secondOperand, firstOperand] = [firstOperand, 0];
     firstOperand = parseFloat(firstOperand);
     secondOperand = parseFloat(secondOperand);
