@@ -77,11 +77,9 @@ body {
     vertical-align: middle;
     transition: 0.3s;
   }
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     .numberButton:hover,
-    .operatorButton:hover,
-    .numberButton:active,
-    .operatorButton:active {
+    .operatorButton:hover {
       background-color: #7b37e0;
     }
   }
