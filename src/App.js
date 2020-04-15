@@ -196,33 +196,40 @@ class App extends React.Component {
       this.state.result ? this.baseState : this.state
     );
     let key = state.operator ? "secondOperand" : "firstOperand";
-    let value = state[key];
-    if (num === "." && value.indexOf(".") !== -1) return;
-
-    state[key] = `${value}${num}`
-      .replace(/[^.]*/, (match) => {
-        return parseInt(match.slice(-15)) || 0;
-      })
-      .slice(-15);
+    this.inputNumToState(state, key, num);
     this.setState(state);
   };
 
-  handleOperator = (operator) => {
-    let { result } = this.state;
-    let updater = { operator };
+  inputNumToState = (state, key, num) => {
+    let value = state[key];
+    if (!(num === "." && value.indexOf(".") !== -1))
+      state[key] = `${value}${num}`
+        .replace(/[^.]*/, (match) => {
+          return parseInt(match.slice(-15)) || 0;
+        })
+        .slice(-15);
+  };
 
-    if (result) {
-      result === "ERROR" ? this.handleClear(true) : this.handleNum(result);
-    } else if (this.state.secondOperand) {
-      let num = this.calculate();
-      this.handleClear(true);
-      this.handleNum(num);
+  handleOperator = (operator) => {
+    let { result, secondOperand } = this.state;
+
+    let state;
+    let firstOperand;
+    if (result || secondOperand) {
+      state = Object.assign({}, this.baseState);
+      result = result || this.calculate();
+      firstOperand = result === "ERROR" ? "0" : result;
     } else {
-      updater.firstOperand = parseFloat(
-        this.state.firstOperand || 0
-      ).toString();
+      state = Object.assign({}, this.state);
+      if (!state.firstOperand) {
+        firstOperand = "0";
+      }
     }
-    this.setState(updater);
+
+    if (firstOperand) this.inputNumToState(state, "firstOperand", firstOperand);
+    state.operator = operator;
+
+    this.setState(state);
   };
 
   calculate = () => {
