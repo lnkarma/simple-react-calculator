@@ -161,6 +161,9 @@ class DisplayUnit extends React.Component {
       value
     );
   }
+  componentWillUnmount() {
+    window.removeEventListener("deviceorientation");
+  }
   render() {
     let currentDisplay = this.state.upsideDown
       ? this.getCalcWord(this.props.currentDisplay)
