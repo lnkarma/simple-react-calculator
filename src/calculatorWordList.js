@@ -112,7 +112,7 @@ let calculatorWordList = {
   "57334": "heels",
   "7734": "hell",
   "4517734": "hellish",
-  "0.7734": "hello.",
+  "0.7734": "hello. 👋",
   "507734": "hellos",
   "57734": "hells",
   "534": "hes",
