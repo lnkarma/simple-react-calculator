@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/simple-react-calculator/static/css/main.a8ca860a.chunk.css",
-    "main.js": "/simple-react-calculator/static/js/main.ade395e2.chunk.js",
-    "main.js.map": "/simple-react-calculator/static/js/main.ade395e2.chunk.js.map",
+    "main.css": "/simple-react-calculator/static/css/main.f2c0a84e.chunk.css",
+    "main.js": "/simple-react-calculator/static/js/main.c090f998.chunk.js",
+    "main.js.map": "/simple-react-calculator/static/js/main.c090f998.chunk.js.map",
     "runtime-main.js": "/simple-react-calculator/static/js/runtime-main.9eeabd02.js",
     "runtime-main.js.map": "/simple-react-calculator/static/js/runtime-main.9eeabd02.js.map",
     "static/js/2.09fd4fdd.chunk.js": "/simple-react-calculator/static/js/2.09fd4fdd.chunk.js",
     "static/js/2.09fd4fdd.chunk.js.map": "/simple-react-calculator/static/js/2.09fd4fdd.chunk.js.map",
     "index.html": "/simple-react-calculator/index.html",
-    "precache-manifest.4132ed71b64baca7daa7adc7c5ea51f2.js": "/simple-react-calculator/precache-manifest.4132ed71b64baca7daa7adc7c5ea51f2.js",
+    "precache-manifest.49ade8d39a37a29e0e97660b2df976da.js": "/simple-react-calculator/precache-manifest.49ade8d39a37a29e0e97660b2df976da.js",
     "service-worker.js": "/simple-react-calculator/service-worker.js",
-    "static/css/main.a8ca860a.chunk.css.map": "/simple-react-calculator/static/css/main.a8ca860a.chunk.css.map",
+    "static/css/main.f2c0a84e.chunk.css.map": "/simple-react-calculator/static/css/main.f2c0a84e.chunk.css.map",
     "static/js/2.09fd4fdd.chunk.js.LICENSE.txt": "/simple-react-calculator/static/js/2.09fd4fdd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9eeabd02.js",
     "static/js/2.09fd4fdd.chunk.js",
-    "static/css/main.a8ca860a.chunk.css",
-    "static/js/main.ade395e2.chunk.js"
+    "static/css/main.f2c0a84e.chunk.css",
+    "static/js/main.c090f998.chunk.js"
   ]
 }
