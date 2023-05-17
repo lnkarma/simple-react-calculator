@@ -1,5 +1,5 @@
 let calculatorWordList = {
-  "143": "I Love You",
+  "143": "ki bhabchili dash 😆",
   "338": "bee",
   "5338": "bees",
   "638": "beg",
