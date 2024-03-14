@@ -1,5 +1,6 @@
 let calculatorWordList = {
-  "143": "ki bhabchili dash 😆",
+  "8910242508": "rosogolla",
+  "143": "alabu pukulu",
   "338": "bee",
   "5338": "bees",
   "638": "beg",
